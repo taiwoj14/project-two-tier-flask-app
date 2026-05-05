@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prashant | Flask App 🚀</title>
+    <title>My Portfolio | Flask App 🚀</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -12,8 +12,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+            font-family: 'Poppins', sans-serif;          
+	}
 
         body {
             background: linear-gradient(160deg, #0C0D16, #1A1C2B);
@@ -25,7 +25,6 @@
             padding: 20px;
         }
 
-        /* Flex container for profile + content */
         .container {
             display: flex;
             flex-direction: row;
@@ -38,7 +37,6 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
         }
 
-        /* Left side: profile photo */
         .profile-photo {
             flex: 0 0 200px;
             margin-right: 30px;
@@ -51,7 +49,6 @@
             box-shadow: 0 4px 15px rgba(85, 153, 255, 0.5);
         }
 
-        /* Right side: content */
         .content {
             flex: 1;
         }
@@ -71,7 +68,7 @@
 
         .about {
             margin-bottom: 20px;
-            padding: 10px 15px;
+            padding: 15px;
             border-radius: 12px;
             background: rgba(255, 255, 255, 0.05);
         }
@@ -86,6 +83,12 @@
             font-size: 0.95rem;
             color: #ddd;
             line-height: 1.5;
+        }
+
+        .tech {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #bbb;
         }
 
         .messages {
@@ -115,14 +118,7 @@
             color: #fff;
             border-radius: 8px;
             font-size: 16px;
-            transition: all 0.3s ease;
             text-align: center;
-        }
-
-        input[type="text"]:focus {
-            border-color: #5599FF;
-            box-shadow: 0 0 12px rgba(85, 153, 255, 0.6);
-            outline: none;
         }
 
         input[type="submit"] {
@@ -134,16 +130,12 @@
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
-            transition: all 0.3s ease;
         }
 
         input[type="submit"]:hover {
             background: #417ad6;
-            box-shadow: 0 0 15px rgba(85, 153, 255, 0.6);
-            transform: translateY(-2px);
         }
 
-        /* Responsive */
         @media (max-width: 800px) {
             .container {
                 flex-direction: column;
@@ -153,7 +145,6 @@
             .profile-photo {
                 margin-right: 0;
                 margin-bottom: 20px;
-                flex: 0 0 auto;
             }
         }
     </style>
@@ -161,25 +152,35 @@
 
 <body>
     <div class="container">
+
         <!-- Profile photo -->
         <div class="profile-photo">
-            <img src="1.png" alt="Prashant Photo">
+            <img src="1.png" alt="Profile Photo">
         </div>
 
         <!-- Content -->
         <div class="content">
             <div class="header">
-                <h1>Prashant Gohil | DevOps Enthusiast</h1>
-                <p>Student | Aspiring Cloud & DevOps Engineer</p>
+                <h1>Taiwo Joseph | Cloud & DevOps Engineer</h1>
+                <p>Aspiring SRE | AWS | Automation | CI/CD</p>
             </div>
 
             <div class="about">
-                <h2>About Me</h2>
-                <p>Hi, I'm <b>Prashant</b> 👋, a student and aspiring Cloud & DevOps engineer.</p>
+                <h2>About This Project</h2>
+                <p>
+                    This is a <b>two-tier Flask web application</b> demonstrating a scalable architecture 
+                    where the frontend interacts with a backend service and database.
+                </p>
+
                 <p style="margin-top:10px;">
-                    <b>Project:</b> I have deployed a 2-tier Flask application (Flask + MySQL) on AWS EC2 using Docker.  
-                    I used Docker Compose to manage both containers with volumes and a custom network.  
-                    The source code is hosted on GitHub, and Jenkins is integrated to set up a CI/CD pipeline for automated deployment.
+                    The application is containerized using Docker and managed with Docker Compose to run 
+                    multiple services (Flask and MySQL) in a unified environment. It is deployed on AWS EC2 
+                    and integrated with a CI/CD pipeline for automated build and deployment, showcasing 
+                    hands-on experience in cloud and DevOps workflows.
+                </p>
+
+                <p class="tech">
+                    <b>Tech Stack:</b> Flask, Python, MySQL, Docker, AWS EC2, Jenkins, CI/CD
                 </p>
             </div>
 
@@ -190,8 +191,8 @@
             </div>
 
             <form id="messageForm">
-                <input type="text" name="new_message" placeholder="Type your message..." required>
-                <input type="submit" value="Send">
+                <input type="text" name="new_message" placeholder="Leave a message or feedback..." required>
+                <input type="submit" value="Send Message">
             </form>
         </div>
     </div>
@@ -218,9 +219,6 @@
                             $(".messages").append("<p>" + response.message + "</p>");
                             messageInput.val("");
                         }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("AJAX Error:", status, error);
                     }
                 });
             });
