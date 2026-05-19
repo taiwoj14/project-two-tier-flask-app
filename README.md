@@ -3,10 +3,14 @@
 
 **Author:** Taiwo Joseph
 **Date:** May 07, 2026
+
 ---
+
 ### **1. Project Overview**
 This project involves the development of an automated CI/CD pipeline for two-tier Flask application deployed on AWS. The application consists of a Flask frontend and MySQL backend, containerized using Docker and managed with Docker Compose. Jenkins was used to automate the build and deployment process, while Github served as the version control platform. The project demonstrates key DevOps practices such as continous integration, continous deployment,containerization, and cloud-based application deployment.
+
 ---
+
 ### **2. Step 1: AWS EC2 Instance Preparation**
 
 1.  **Launch EC2 Instance:**
@@ -31,7 +35,9 @@ This project involves the development of an automated CI/CD pipeline for two-tie
     ```bash
     ssh -i /path/to/key.pem ubuntu@<ec2-public-ip>
     ```
-    
+
+ ---
+ 
 ### **3. Step 2: Install Dependencies on EC2**
 
 1.  **Update System Packages:**
@@ -73,9 +79,8 @@ This project involves the development of an automated CI/CD pipeline for two-tie
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
   sudo apt update
-  sudo apt install Jenkins
-
-    ```
+  sudo apt install Jenkins -y
+  ```
 
 3.  **Start and Enable Jenkins Service:**
     ```bash
