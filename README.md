@@ -15,7 +15,7 @@ This project involves the development of an automated CI/CD pipiline for two-tie
 ### **2. Architecture Diagram**
 
 ```
-
+<img src="diagrams/Achitectural.png">
 
 ```
 
