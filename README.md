@@ -3,25 +3,11 @@
 
 **Author:** Taiwo Joseph
 **Date:** May 07, 2026
-
 ---
-
 ### **1. Project Overview**
-This project involves the development of an automated CI/CD pipiline for two-tier Flask application deployed on AWS. The application consists of a Flask fronend and MySQL backend, containerized usind Docker and managed with Docker Compose. Jenkins was used to automate the build and deployment process, while Github served as the version control platform. The project demonstrates key DevOps practices such as continous integration, continous deployment,containerization, and cloud-based application deployment.
-
-
+This project involves the development of an automated CI/CD pipeline for two-tier Flask application deployed on AWS. The application consists of a Flask frontend and MySQL backend, containerized using Docker and managed with Docker Compose. Jenkins was used to automate the build and deployment process, while Github served as the version control platform. The project demonstrates key DevOps practices such as continous integration, continous deployment,containerization, and cloud-based application deployment.
 ---
-
-### **2. Architecture Diagram**
-
-```
-<img src="diagrams/Achitectural.png">
-
-```
-
----
-
-### **3. Step 1: AWS EC2 Instance Preparation**
+### **2. Step 1: AWS EC2 Instance Preparation**
 
 1.  **Launch EC2 Instance:**
     * Navigate to the AWS EC2 console.
@@ -45,10 +31,8 @@ This project involves the development of an automated CI/CD pipiline for two-tie
     ```bash
     ssh -i /path/to/key.pem ubuntu@<ec2-public-ip>
     ```
-
----
-
-### **4. Step 2: Install Dependencies on EC2**
+    
+### **3. Step 2: Install Dependencies on EC2**
 
 1.  **Update System Packages:**
     ```bash
@@ -74,7 +58,7 @@ This project involves the development of an automated CI/CD pipiline for two-tie
 
 ---
 
-### **5. Step 3: Jenkins Installation and Setup**
+### **4. Step 3: Jenkins Installation and Setup**
 
 1.  **Install Java (OpenJDK 17):**
     ```bash
@@ -116,7 +100,7 @@ This project involves the development of an automated CI/CD pipiline for two-tie
 
 ---
 
-### **6. Step 4: GitHub Repository Configuration**
+### **5. Step 4: GitHub Repository Configuration**
 
 Ensure your GitHub repository contains the following three files.
 
@@ -236,7 +220,7 @@ pipeline {
 
 ---
 
-### **7. Step 5: Jenkins Pipeline Creation and Execution**
+### **6. Step 5: Jenkins Pipeline Creation and Execution**
 
 1.  **Create a New Pipeline Job in Jenkins:**
     * From the Jenkins dashboard, select **New Item**.
@@ -265,13 +249,5 @@ pipeline {
 
 ---
 
-### **8. Conclusion**
+### **7. Conclusion**
 The CI/CD pipeline is now fully operational. Any `git push` to the `main` branch of the configured GitHub repository will automatically trigger the Jenkins pipeline, which will build the new Docker image and deploy the updated application, ensuring a seamless and automated workflow from development to production.
-
-
-### **9. Infrastructure Diagram**
-<img src="diagrams/Infrastructure.png">
-
-
-### **10. Work flow Diagram**
-<img src="diagrams/project_workflow.png">
