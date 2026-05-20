@@ -245,7 +245,9 @@ pipeline {
     * Click **Build Now** to trigger the pipeline manually for the first time.
     * Monitor the execution through the **Stage View** or **Console Output**.
 
+<img src="diagrams/05a.png">
 <img src="diagrams/05b.png">
+<img src="diagrams/06a.png">
 <img src="diagrams/06b.png">
 
 4.  **Verify Deployment:**
