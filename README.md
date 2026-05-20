@@ -71,11 +71,6 @@ This project involves the development of an automated CI/CD pipeline for two-tie
     sudo apt install openjdk-17-jdk -y
     ```
 
-2.  **Add Jenkins Repository and Install:**
-    ```bash
-sudo wget -0  
-  ```
-
 3.  **Start and Enable Jenkins Service:**
     ```bash
     sudo systemctl start jenkins
