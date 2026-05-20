@@ -2,7 +2,7 @@
 # DevOps Project Report: Automated CI/CD Pipeline for a 2-Tier Flask Application on AWS
 
 **Author:** Taiwo Joseph
-**Date:** May 07, 2026
+**Date:** May 19, 2026
 
 ---
 
