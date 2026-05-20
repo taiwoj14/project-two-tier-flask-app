@@ -72,13 +72,7 @@ This project involves the development of an automated CI/CD pipeline for two-tie
     ```
 2. **Add Jenkins Repository and install:**
    ```
-    sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
-  https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
-echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
-  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null
-sudo apt update
-sudo apt install Jenkins
+    sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \ https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key echo "deb [signed-by=/etc/apt/keyrings/jenkins keyring.asc]" \ https://pkg.jenkins.io/debian-stable binary/ | sudo tee \ /etc/apt/sources.list.d/jenkins.list > /dev/null sudo apt update sudo apt install Jenkins
 ```
 
 3.  **Start and Enable Jenkins Service:**
