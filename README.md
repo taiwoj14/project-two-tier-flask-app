@@ -66,10 +66,20 @@ This project involves the development of an automated CI/CD pipeline for two-tie
 
 ### **4. Step 3: Jenkins Installation and Setup**
 
-1.  **Install Java (OpenJDK 17):**
+1.  **Install Java (OpenJDK 21):**
     ```bash
-    sudo apt install openjdk-17-jdk -y
+    sudo apt install openjdk-21-jdk -y
     ```
+2. **Add Jenkins Repository and install:**
+   ```
+    sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update
+sudo apt install Jenkins
+```
 
 3.  **Start and Enable Jenkins Service:**
     ```bash
